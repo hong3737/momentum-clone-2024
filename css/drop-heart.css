@@ -1,0 +1,15 @@
+.drop-heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -250px;
+}
+
+@keyframes drop {
+    from {
+    }
+    to {
+        top: calc(90vh);
+        opacity: 0;
+    }
+}

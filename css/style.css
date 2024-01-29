@@ -1,3 +1,25 @@
+@import url("reset.css");
+@import url("drop-heart.css");
+@import url("cursor.css");
+@import url("todo.css");
+
+body {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #efefef;
+}
+
+main {
+    flex-grow: 1;
+}
+
+aside {
+    width: 30%;
+}
+
 .hidden {
     display: none;
 }
