@@ -22,7 +22,9 @@
         </div>
     </main>
     <aside>
-        <section class="todo-box hidden">
+        <input id="openTodoCheck" class="openCheck" type="checkbox">
+        <label for="openTodoCheck"></label>
+        <section class="todo-box">
             <form id="todo-form" class="todo-box__form">
                 <input type="text" placeholder="Write To Do and Press Enter" required>
             </form>
@@ -30,11 +32,12 @@
                 <li class="todo-list__title">To Do List</li>
             </ul>
         </section>
+        <input id="openWeatherCheck" class="openCheck" type="checkbox">
+        <label for="openWeatherCheck"></label>
         <div id="weather">
             <span></span>
             <span></span>
         </div>
-        <button id="openTodo">ToDo</button>
     </aside>
 
     <div class="snow"></div>

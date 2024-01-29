@@ -54,13 +54,3 @@ if (savedToDos !== null) {
     toDos = parseToDos;
     parseToDos.forEach(paintToDo);
 }
-
-const openTodo = document.getElementById("openTodo");
-
-function handleOpenTodo() {
-    const todoBox = document.querySelector(".todo-box");
-    todoBox.classList.toggle("hidden");
-    console.log(todoBox.classList);
-}
-
-openTodo.addEventListener("click", handleOpenTodo);
