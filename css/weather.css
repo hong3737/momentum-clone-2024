@@ -1,5 +1,6 @@
 #weather {
     display: block;
+    min-height: 85px;
     padding: 10px;
     background-color: var(--blue);
     border-radius: 10px;

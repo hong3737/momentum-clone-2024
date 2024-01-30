@@ -44,6 +44,30 @@ aside {
     padding: 10px;
     background-color: var(--beige);
     box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+aside.hide {
+    transform: translateX(-100%);
+}
+
+.aside-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 70px;
+    border-radius: 20px 0 0 20px;
+    background-color: var(--blue);
+    color: #fff;
+}
+
+aside:has(.aside-close:) {
+    transform: translateX(-100%);
 }
 
 .hidden {
@@ -93,4 +117,42 @@ aside {
 #quote span.quote__author {
     margin-top: 10px;
     font-weight: lighter;
+}
+
+.random-img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 10px;
+}
+
+.random-img:last-child {
+    bottom: 110px;
+    left: 30px;
+}
+
+.random-img::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 40%;
+    width: 20px;
+    height: 50px;
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--blue) 0,
+        var(--blue) 1px,
+        #fff 0,
+        #fff 50%
+    );
+    background-size: 10px 10px;
+    transform: rotate(-15deg);
+    /* background-image: radial-gradient(var(--blue) 1px, transparent 1px);
+    background-size: calc(10 * 1px) calc(10 * 1px); */
+}
+
+.random-img img {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: -0.5rem 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
 }

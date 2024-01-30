@@ -10,6 +10,13 @@
 
 <body>
     <main>
+        <div id="clock">
+            <ul class="clock__center">
+                <li class="clock__hour"></li>
+                <li class="clock__minute"></li>
+                <li class="clock__second"></li>
+            </ul>
+        </div>
         <form id="login-form" class="hidden">
             <h1 class="waviy">
                 <span class="waviy--blue">What's your</span>
@@ -23,13 +30,6 @@
             </h1>
             <input required maxlength="15" type="text" placeholder="Wrtie your name here" />
         </form>
-        <div id="clock">
-            <ul class="clock__center">
-                <li class="clock__hour"></li>
-                <li class="clock__minute"></li>
-                <li class="clock__second"></li>
-            </ul>
-        </div>
         <h1 id="greeting" class="hidden waviy">
             <span class="mr20">
                 <em>H</em>
@@ -69,6 +69,7 @@
                 <li class="todo-list__title">To Do List</li>
             </ul>
         </section>
+        <button class="aside-close"></button>
     </aside>
 
     <div class="snow"></div>
@@ -79,7 +80,7 @@
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script src="js/random-img.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/mouse-cursor.js"></script>
