@@ -1,0 +1,54 @@
+.openCheck {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.openCheck + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    padding: 0px 10px 0 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: inset 0.5rem 0.3rem 0.7rem var(--gray),
+        inset -0.2rem -0.2rem 1rem #fff;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.openCheck + label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff url("../img/list-solid.svg") no-repeat center center;
+    background-size: 50%;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--gray), -0.2rem -0.2rem 0.1rem #fff;
+    transition: all var(--label-second) ease-in-out;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#openWeatherCheck.openCheck + label::after {
+    background-image: url("../img/rainbow-solid.svg");
+}
+
+.openCheck:checked + label::after {
+    transform: translateX(110px);
+    box-shadow: -0.2rem 0.3rem 0.3rem var(--gray), 0.1rem 0.1rem 0.1rem #fff;
+}

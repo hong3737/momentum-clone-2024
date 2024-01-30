@@ -5,10 +5,31 @@ function onGeoOk(position) {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            const weather = document.querySelector("#weather span:first-child");
-            const city = document.querySelector("#weather span:last-child");
+            const weather = document.querySelector("#weather .weather__main");
+            const icon = document.querySelector("#weather .weather__icon");
+            const temp = document.querySelector("#weather .weather__temp");
+            const city = document.querySelector("#weather .weather__city");
+            weather.innerText = `${data.weather[0].main}`;
+            temp.innerText = `${data.main.temp}°C`;
             city.innerText = data.name;
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+
+            switch (data.weather[0].main) {
+                case "Clear":
+                    icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                    break;
+                case "Wind":
+                    icon.innerHTML = '<i class="fa-solid fa-wind"></i>';
+                    break;
+                case "Clouds":
+                    icon.innerHTML = '<i class="fa-solid fa-cloud"></i>';
+                    break;
+                case "Rain":
+                    icon.innerHTML = '<i class="fa-solid fa-umbrella"></i>';
+                    break;
+                case "Snow":
+                    icon.innerHTML = '<i class="fa-regular fa-snowflake"></i>';
+                    break;
+            }
         });
 }
 function onGeoError() {

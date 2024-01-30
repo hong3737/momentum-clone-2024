@@ -1,0 +1,53 @@
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.waviy em {
+  position: relative;
+  display: inline-block;
+  min-height: 2px;
+  letter-spacing: -22px;
+  animation: waviy 1s forwards;
+  animation-iteration-count: 3;
+}
+.waviy em:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.waviy em:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.waviy em:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.waviy em:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.waviy em:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.waviy em:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+.waviy--yellow {
+  color: var(--yellow);
+}
+
+.waviy--blue {
+  color: var(--blue);
+}/*# sourceMappingURL=title.css.map */

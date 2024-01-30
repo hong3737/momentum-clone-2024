@@ -1,7 +1,12 @@
 @import url("reset.css");
-@import url("drop-heart.css");
-@import url("cursor.css");
+@import url("variable.css");
+@import url("title.css");
+@import url("label-check.css");
 @import url("todo.css");
+@import url("clock.css");
+@import url("weather.css");
+@import url("cursor.css");
+@import url("drop-heart.css");
 
 body {
     position: relative;
@@ -13,26 +18,79 @@ body {
     background-image: linear-gradient(
             90deg,
             transparent 79px,
-            #abced4 79px,
-            #abced4 81px,
+            var(--light-blue) 79px,
+            var(--light-blue) 81px,
             transparent 81px
         ),
-        linear-gradient(#eee 0.1em, transparent 0.1em);
+        linear-gradient(#f8f8f8 0.1em, transparent 0.1em);
     background-size: 100% 1.2em;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
+    color: #323232;
 }
 
 main {
     flex-grow: 1;
+    padding-left: 180px;
+    box-sizing: border-box;
 }
 
 aside {
-    width: 30%;
+    position: relative;
+    width: 180px;
+    height: 100%;
+    padding: 10px;
+    background-color: var(--beige);
+    box-sizing: border-box;
 }
 
 .hidden {
     display: none;
+}
+
+#login-form {
+    transition: all 0.7s;
+    transform: none;
+}
+
+#login-form:hover,
+#login-form:focus-within {
+    transform: translateY(-10px);
+}
+
+#login-form input[type="text"] {
+    width: 550px;
+    height: 40px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 0;
+    text-align: center;
+    border-bottom: 3px solid var(--beige);
+    opacity: 0;
+    transition: all 0.7s;
+    transform: translateY(-30px);
+}
+
+#login-form:hover input[type="text"],
+#login-form:focus-within input[type="text"] {
+    opacity: 1;
+    transform: none;
+    background: none;
+}
+
+#quote {
+    margin-top: 100px;
+}
+
+#quote span {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+}
+
+#quote span.quote__author {
+    margin-top: 10px;
+    font-weight: lighter;
 }

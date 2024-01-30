@@ -11,19 +11,56 @@
 <body>
     <main>
         <form id="login-form" class="hidden">
-            <input required maxlength="15" type="text" placeholder="What is your name?" />
-            <input type="submit" value="Log In" />
+            <h1 class="waviy">
+                <span class="waviy--blue">What's your</span>
+                <span>
+                    <em>n</em>
+                    <em>a</em>
+                    <em>m</em>
+                    <em>e</em>
+                    <em>?</em>
+                </span>
+            </h1>
+            <input required maxlength="15" type="text" placeholder="Wrtie your name here" />
         </form>
-        <h2 id="clock">00:00:00</h2>
-        <h1 id="greeting" class="hidden"></h1>
+        <div id="clock">
+            <ul class="clock__center">
+                <li class="clock__hour"></li>
+                <li class="clock__minute"></li>
+                <li class="clock__second"></li>
+            </ul>
+        </div>
+        <h1 id="greeting" class="hidden waviy">
+            <span class="mr20">
+                <em>H</em>
+                <em>e</em>
+                <em>l</em>
+                <em>l</em>
+                <em>o</em>
+            </span>
+        </h1>
         <div id="quote">
             <span></span>
-            <span></span>
+            <span class="quote__author"></span>
         </div>
     </main>
     <aside>
-        <input id="openTodoCheck" class="openCheck" type="checkbox">
-        <label for="openTodoCheck"></label>
+        <div class="openCheckBox">
+            <input id="openWeatherCheck" class="openCheck" type="checkbox">
+            <label for="openWeatherCheck">Weather</label>
+            <input id="openTodoCheck" class="openCheck" type="checkbox">
+            <label for="openTodoCheck">To Do List</label>
+        </div>
+        <a id="weather" href="https://www.weather.go.kr/w/index.do" target="_blank">
+            <div>
+                <span class="weather__icon"></span>
+                <span class="weather__temp"></span>
+            </div>
+            <div>
+                <span class="weather__main"></span>
+                <span class="weather__city"></span>
+            </div>
+        </a>
         <section class="todo-box">
             <form id="todo-form" class="todo-box__form">
                 <input type="text" placeholder="Write To Do and Press Enter" required>
@@ -32,17 +69,12 @@
                 <li class="todo-list__title">To Do List</li>
             </ul>
         </section>
-        <input id="openWeatherCheck" class="openCheck" type="checkbox">
-        <label for="openWeatherCheck"></label>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div>
     </aside>
 
     <div class="snow"></div>
     <div class="cursor"></div>
     <div class="cursor"></div>
+    <script src="https://kit.fontawesome.com/a8f516319d.js" crossorigin="anonymous"></script>
     <script src="js/api-key.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
@@ -52,7 +84,6 @@
     <script src="js/weather.js"></script>
     <script src="js/mouse-cursor.js"></script>
     <!-- <script src="js/drop-heart.js"></script> -->
-    <script src="https://kit.fontawesome.com/a8f516319d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
