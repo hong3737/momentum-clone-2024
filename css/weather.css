@@ -1,20 +1,23 @@
 #weather {
+    position: relative;
+    left: 100%;
     display: block;
-    min-height: 85px;
+    min-height: 105px;
     padding: 10px;
     background-color: var(--blue);
     border-radius: 10px;
     color: #fff;
     box-sizing: border-box;
-    transform: translateX(100%);
     transition: all var(--label-second);
 }
 
 .openCheckBox:has(#openWeatherCheck:checked) ~ #weather {
-    transform: none;
+    left: 0;
 }
 
 #weather div:last-child {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 5px;
     margin-top: 10px;
@@ -25,8 +28,20 @@
 
 .weather__icon {
     font-size: 30px;
-    margin-bottom: 5px;
+    margin-right: 5px;
 }
+
+.weather__icon i {
+    scale: 1;
+    transform: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#weather:hover .weather__icon i {
+    scale: 0.9;
+    transform: rotate(30deg);
+}
+
 .weather__temp {
     font-size: 18px;
     color: var(--yellow);

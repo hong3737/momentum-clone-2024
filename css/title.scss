@@ -8,19 +8,21 @@
     gap: 20px;
     justify-content: center;
 }
-.waviy em {
-    position: relative;
-    display: inline-block;
-    min-height: 2px;
-    letter-spacing: -22px;
-    animation: waviy 1s forwards;
-    animation-iteration-count: 3;
-    @for $i from 1 through 6 {
-        &:nth-child(#{$i}) {
-            animation-delay: 0.1s * $i;
-        }
-    }
-}
+// .waviy span {
+//     position: relative;
+// }
+
+// .waviy span:first-child::before {
+//     content: "";
+//     position: absolute;
+//     top: -35px;
+//     left: -65px;
+//     width: 120px;
+//     height: 120px;
+//     border-radius: 50%;
+//     background-image: radial-gradient(var(--blue) 1px, transparent 1px);
+//     background-size: calc(10 * 1px) calc(10 * 1px);
+// }
 
 @keyframes waviy {
     0%,
@@ -31,6 +33,24 @@
     20% {
         transform: translateY(-20px);
     }
+}
+
+.waviy em {
+    position: relative;
+    display: inline-block;
+    min-height: 2px;
+    letter-spacing: -10px;
+    animation: waviy 1s;
+    animation-iteration-count: 3;
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+            animation-delay: 0.1s * $i;
+        }
+    }
+}
+
+#greeting.waviy:hover span:last-child {
+    animation: waviy 0.8s infinite;
 }
 
 .waviy--yellow {

@@ -12,6 +12,7 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
+    console.log(event);
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
@@ -24,7 +25,7 @@ function paintToDo(newTodoObj) {
     li.id = newTodoObj.id;
 
     const button = document.createElement("button");
-    button.innerText = "X";
+    button.classList.add("btn-close");
     button.addEventListener("click", deleteToDo);
 
     li.appendChild(span);

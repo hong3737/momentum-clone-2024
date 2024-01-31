@@ -10,46 +10,42 @@
 
 <body>
     <main>
-        <div id="clock">
-            <ul class="clock__center">
-                <li class="clock__hour"></li>
-                <li class="clock__minute"></li>
-                <li class="clock__second"></li>
-            </ul>
-        </div>
-        <form id="login-form" class="hidden">
-            <h1 class="waviy">
-                <span class="waviy--blue">What's your</span>
-                <span>
-                    <em>n</em>
-                    <em>a</em>
-                    <em>m</em>
+        <div id="clock"></div>
+        <div class="content">
+            <form id="login-form" class="hidden">
+                <h1 class="waviy">
+                    <span class="waviy--blue">What's your</span>
+                    <span>
+                        <em>n</em>
+                        <em>a</em>
+                        <em>m</em>
+                        <em>e</em>
+                        <em>?</em>
+                    </span>
+                </h1>
+                <input required maxlength="15" type="text" placeholder="Wrtie your name here" />
+            </form>
+            <h1 id="greeting" class="hidden waviy">
+                <span class="mr20 mb20">
+                    <em>H</em>
                     <em>e</em>
-                    <em>?</em>
+                    <em>l</em>
+                    <em>l</em>
+                    <em>o</em>
                 </span>
             </h1>
-            <input required maxlength="15" type="text" placeholder="Wrtie your name here" />
-        </form>
-        <h1 id="greeting" class="hidden waviy">
-            <span class="mr20">
-                <em>H</em>
-                <em>e</em>
-                <em>l</em>
-                <em>l</em>
-                <em>o</em>
-            </span>
-        </h1>
-        <div id="quote">
-            <span></span>
-            <span class="quote__author"></span>
+            <div id="quote">
+                <span></span>
+                <span class="quote__author"></span>
+            </div>
         </div>
     </main>
     <aside>
         <div class="openCheckBox">
-            <input id="openWeatherCheck" class="openCheck" type="checkbox">
-            <label for="openWeatherCheck">Weather</label>
             <input id="openTodoCheck" class="openCheck" type="checkbox">
             <label for="openTodoCheck">To Do List</label>
+            <input id="openWeatherCheck" class="openCheck" type="checkbox">
+            <label for="openWeatherCheck">Weather</label>
         </div>
         <a id="weather" href="https://www.weather.go.kr/w/index.do" target="_blank">
             <div>
@@ -62,14 +58,16 @@
             </div>
         </a>
         <section class="todo-box">
+            <p class="todo-list__title">To Do List</p>
+            <ul id="todo-list" class="todo-box__list">
+            </ul>
             <form id="todo-form" class="todo-box__form">
                 <input type="text" placeholder="Write To Do and Press Enter" required>
             </form>
-            <ul id="todo-list" class="todo-box__list">
-                <li class="todo-list__title">To Do List</li>
-            </ul>
         </section>
-        <button class="aside-close"></button>
+        <button class="aside-close"><i class="fa-solid fa-angle-right"></i></button>
+        <button><i class="fa-solid fa-stopwatch fa-2xl"></i></button>
+        <button><i class="fa-regular fa-calendar-plus fa-2xl"></i></button>
     </aside>
 
     <div class="snow"></div>
@@ -78,12 +76,13 @@
     <script src="https://kit.fontawesome.com/a8f516319d.js" crossorigin="anonymous"></script>
     <script src="js/api-key.js"></script>
     <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
+    <script src="js/time.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/random-img.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/mouse-cursor.js"></script>
+    <script src="js/app.js"></script>
     <!-- <script src="js/drop-heart.js"></script> -->
 </body>
 

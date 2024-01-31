@@ -15,7 +15,8 @@ function onGeoOk(position) {
 
             switch (data.weather[0].main) {
                 case "Clear":
-                    icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                    icon.innerHTML =
+                        '<i class="fa-solid fa-sun" style="color:var(--yellow)"></i>';
                     break;
                 case "Wind":
                     icon.innerHTML = '<i class="fa-solid fa-wind"></i>';
