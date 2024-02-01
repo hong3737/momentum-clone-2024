@@ -30,6 +30,10 @@ function onGeoOk(position) {
                 case "Snow":
                     icon.innerHTML = '<i class="fa-regular fa-snowflake"></i>';
                     break;
+                default:
+                    icon.innerHTML =
+                        '<i class="fa-solid fa-sun" style="color:var(--yellow)"></i>';
+                    break;
             }
         });
 }
