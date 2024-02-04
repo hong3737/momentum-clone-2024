@@ -7,6 +7,8 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
+    line-height: 75px;
 }
 // .waviy span {
 //     position: relative;
@@ -58,4 +60,7 @@
 }
 .waviy--blue {
     color: var(--blue);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 560px;
 }

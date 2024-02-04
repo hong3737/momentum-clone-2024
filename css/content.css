@@ -9,8 +9,7 @@ main {
 }
 
 .content {
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 #clock {
@@ -52,7 +51,7 @@ main {
 }
 
 #quote {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 40px;
 }
@@ -75,12 +74,14 @@ main {
     position: absolute;
     width: 200px;
     height: 200px;
+    left: 150px;
     bottom: 10px;
+    z-index: 1;
 }
 
 .random-img:last-child {
     bottom: 110px;
-    left: -150px;
+    left: 20px;
 }
 
 .random-img::after {
