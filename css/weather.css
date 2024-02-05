@@ -11,6 +11,10 @@
     transition: all var(--label-second);
 }
 
+.dark #weather {
+    color: #404040;
+}
+
 .openCheckBox:has(#openWeatherCheck:checked) ~ #weather {
     left: 0;
 }
@@ -27,8 +31,8 @@
 }
 
 .weather__icon {
-    font-size: 30px;
-    margin-right: 5px;
+    font-size: 25px;
+    margin-right: 10px;
 }
 
 .weather__icon i {

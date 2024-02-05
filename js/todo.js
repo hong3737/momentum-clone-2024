@@ -28,8 +28,13 @@ function paintToDo(newTodoObj) {
     button.classList.add("btn-close");
     button.addEventListener("click", deleteToDo);
 
+    const buttonCopy = document.createElement("button");
+    buttonCopy.classList.add("buttonCopy");
+    buttonCopy.addEventListener("click", copyToClipboard);
+
     li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(buttonCopy);
     toDoList.appendChild(li);
 }
 
@@ -54,4 +59,17 @@ if (savedToDos !== null) {
     const parseToDos = JSON.parse(savedToDos);
     toDos = parseToDos;
     parseToDos.forEach(paintToDo);
+}
+
+function copyToClipboard(val) {
+    const copy = document.createElement("textarea");
+    const copyId = document.getElementById(val.target.parentElement.id);
+    const copyVal = copyId.firstChild.innerText;
+
+    copy.value = copyVal;
+    document.body.appendChild(copy);
+
+    copy.select();
+    document.execCommand("copy");
+    document.body.removeChild(copy);
 }

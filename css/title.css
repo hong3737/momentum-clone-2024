@@ -46,10 +46,6 @@
   animation-delay: 0.6s;
 }
 
-#greeting.waviy:hover span:last-child {
-  animation: waviy 0.8s infinite;
-}
-
 .waviy--yellow {
   color: var(--yellow);
 }

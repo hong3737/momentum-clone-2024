@@ -10,21 +10,6 @@
     flex-wrap: wrap;
     line-height: 75px;
 }
-// .waviy span {
-//     position: relative;
-// }
-
-// .waviy span:first-child::before {
-//     content: "";
-//     position: absolute;
-//     top: -35px;
-//     left: -65px;
-//     width: 120px;
-//     height: 120px;
-//     border-radius: 50%;
-//     background-image: radial-gradient(var(--blue) 1px, transparent 1px);
-//     background-size: calc(10 * 1px) calc(10 * 1px);
-// }
 
 @keyframes waviy {
     0%,
@@ -51,9 +36,9 @@
     }
 }
 
-#greeting.waviy:hover span:last-child {
-    animation: waviy 0.8s infinite;
-}
+// #greeting.waviy:hover span:last-child {
+//     animation: waviy 0.8s infinite;
+// }
 
 .waviy--yellow {
     color: var(--yellow);

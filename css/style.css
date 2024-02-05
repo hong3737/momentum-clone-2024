@@ -40,35 +40,28 @@ body {
     font-style: normal;
 }
 
-.hidden {
-    display: none;
+body.dark {
+    background-color: var(--black);
+    background-image: linear-gradient(
+            90deg,
+            transparent 179px,
+            var(--light-blue) 179px,
+            var(--light-blue) 180px,
+            transparent 81px
+        ),
+        linear-gradient(#3d3d3d 0.1em, transparent 0.1em);
+    color: #fff;
 }
 
-.btn-close {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    padding: 0;
-    background-color: #fff;
-    border: 1px solid #1562ad;
-    border-radius: 3px;
-    font-size: 10px;
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black);
+        color: #fff;
+    }
 }
-.btn-close::after {
-    content: "";
-    position: absolute;
-    border: solid #1562ad;
-    border-width: 0 2px 2px 0;
-    display: block;
-    width: 30%;
-    height: 50%;
-    left: 30%;
-    position: absolute;
-    top: 15%;
-    transform: rotate(45deg);
+
+.hidden {
+    display: none;
 }
 
 #drags {

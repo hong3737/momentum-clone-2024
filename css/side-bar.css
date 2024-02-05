@@ -12,6 +12,10 @@ aside.hide {
     transform: translateX(100%);
 }
 
+.dark aside {
+    background-color: var(--yellow);
+}
+
 .aside-close {
     position: absolute;
     bottom: 80px;

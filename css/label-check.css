@@ -38,17 +38,34 @@
     background: #fff url("../img/list-solid.svg") no-repeat center center;
     background-size: 50%;
     border-radius: 50%;
-    box-shadow: 0.3rem 0.3rem 0.3rem var(--gray), -0.2rem -0.2rem 0.1rem #fff;
+    box-shadow: inset -0.1rem -0.1rem 0.2rem var(--gray),
+        0.1rem 0.1rem 0.1rem var(--gray);
     transition: all var(--label-second) ease-in-out;
     font-weight: 800;
     cursor: pointer;
+}
+
+.openCheck:checked + label::after {
+    transform: translateX(112px);
+    box-shadow: inset 0.05rem 0.05rem 0.1rem var(--gray),
+        inset -0.1rem -0.1rem 0.2rem var(--gray);
+}
+
+.dark .openCheck + label {
+    background-color: var(--black);
+    box-shadow: inset 0.1rem 0.1rem 0.3rem var(--black),
+        inset -0.1rem -0.05rem 0.3rem #888;
+}
+
+.dark .openCheck:checked + label::after {
+    box-shadow: inset 0.05rem 0.05rem 0.1rem #888,
+        inset -0.1rem -0.1rem 0.2rem var(--black);
 }
 
 #openWeatherCheck.openCheck + label::after {
     background-image: url("../img/rainbow-solid.svg");
 }
 
-.openCheck:checked + label::after {
-    transform: translateX(110px);
-    box-shadow: -0.2rem 0.3rem 0.3rem var(--gray), 0.1rem 0.1rem 0.1rem #fff;
+#dark-toggle.openCheck + label::after {
+    background-image: url("../img/circle-half-stroke-solid.svg");
 }
