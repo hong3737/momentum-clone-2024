@@ -12,23 +12,41 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 
-//only 디데이 계산
-const today = new Date();
-const dDay = new Date("2024-01-28");
+//디데이 계산, today
+function d_dayCount(event) {
+    event.preventDefault();
+    const d_day = document.querySelector("#d-day input[type='date']").value;
+    const today = new Date();
+    const d_date = new Date(d_day);
+    const d_diff = d_date.getTime() - today.getTime();
 
-today.setHours(0, 0, 0, 0);
-dDay.setHours(0, 0, 0, 0);
+    const d_diffDate = Math.ceil(d_diff / (1000 * 60 * 60 * 24));
+    const d_diffHour = Math.floor(d_diff / (1000 * 60 * 60)) % 24;
+    const d_diffMin = Math.floor(d_diff / (1000 * 60)) % 60;
+    const d_diffSec = Math.floor(d_diff / 1000) % 60;
 
-const timeDifference = dDay - today;
-const oneDay = 24 * 60 * 60 * 1000;
+    const dDayBox = document.createElement("div");
+    const dDaySpan = document.createElement("span");
+    const dDayDel = document.createElement("button");
 
-const daysPassed = Math.floor(timeDifference / oneDay);
+    dDayBox.classList.add("d-day__box", "v2");
+    dDaySpan.classList.add("d-day__item");
+    dDayDel.classList.add("btn__close");
 
-// document.getElementById("dDay").textContent = `${dDay.toLocaleDateString()}`;
-// document.getElementById("today").textContent = `${today.toLocaleDateString()}`;
-// document.getElementById("countdown").textContent = `${daysPassed}일`;
+    dDayBox.innerText = `${d_date.getFullYear()}-${
+        d_date.getMonth() + 1
+    }-${d_date.getDate()}`;
+    dDaySpan.innerText = `${d_diffDate}d ${d_diffHour}h ${d_diffMin}m ${d_diffSec}s`;
 
-console.log(daysPassed);
+    dDayBox.append(dDaySpan, dDayDel);
+    document.querySelector(".d-day__items").append(dDayBox);
+}
+// if (d_diff <= 0) {
+//     clearInterval();
+// }
+// setInterval(d_dayCount, 1000);
+
+document.getElementById("d-day").addEventListener("submit", d_dayCount);
 
 //분,초 카운트다운
 function timeOut() {

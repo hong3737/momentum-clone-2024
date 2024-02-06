@@ -129,14 +129,14 @@
     height: 15px;
     padding: 0;
     background-color: #fff;
-    border: 1px solid #1562ad;
+    border: 1px solid var(--deep-blue);
     border-radius: 3px;
     font-size: 10px;
 }
 .btn-close::after {
     content: "";
     position: absolute;
-    border: solid #1562ad;
+    border: solid var(--deep-blue);
     border-width: 0 2px 2px 0;
     display: block;
     width: 30%;
@@ -153,7 +153,8 @@
     height: 15px;
     margin-left: 2px;
     border-radius: 3px;
-    background: #1562ad url("../img/copy-solid.svg") no-repeat center center;
+    background: var(--deep-blue) url("../img/copy-solid.svg") no-repeat center
+        center;
     background-size: 10px;
 }
 .buttonCopy:active::after {

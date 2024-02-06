@@ -6,7 +6,7 @@
 @import url("content.css");
 @import url("label-check.css");
 @import url("todo.css");
-@import url("clock.css");
+@import url("time.css");
 @import url("weather.css");
 @import url("cursor.css");
 @import url("side-bar.css");
@@ -80,4 +80,24 @@ body.dark {
         width: 100vw;
         top: 0;
     }
+}
+
+.btn__close {
+    position: relative;
+}
+.btn__close:before,
+.btn__close:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    width: 1px;
+    height: 8px;
+    background-color: var(--black);
+}
+.btn__close:before {
+    transform: rotate(45deg);
+}
+.btn__close:after {
+    transform: rotate(-45deg);
 }

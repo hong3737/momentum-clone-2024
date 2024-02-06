@@ -33,15 +33,15 @@
                     <em>l</em>
                     <em>o</em>
                 </span>
-                <button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button id="logout" type="button"><i class="fa-solid fa-right-from-bracket"></i></button>
             </h1>
             <div id="quote">
                 <span></span>
                 <span class="quote__author"></span>
             </div>
         </div>
-        <div id="drags">
-        </div>
+        <div id="drags"></div>
+        <div class="d-day__items"></div>
     </main>
     <aside>
         <div class="openCheckBox">
@@ -51,6 +51,8 @@
             <label for="openTodoCheck">To Do List</label>
             <input id="openWeatherCheck" class="openCheck" type="checkbox">
             <label for="openWeatherCheck">Weather</label>
+            <input id="openDdayCheck" class="openCheck" type="checkbox">
+            <label for="openDdayCheck">D-day</label>
         </div>
         <a id="weather" href="https://www.weather.go.kr/w/index.do" target="_blank">
             <div>
@@ -62,6 +64,12 @@
                 <span class="weather__city"></span>
             </div>
         </a>
+        <form id="d-day">
+            <div class="d-day__box">
+                <input type="date" required>
+                <button id="d-day__btn" type="submit">Set</button>
+            </div>
+        </form>
         <section class="todo-box">
             <p class="todo-list__title">To Do List</p>
             <ul id="todo-list" class="todo-box__list">
@@ -71,8 +79,6 @@
             </form>
         </section>
         <button class="aside-close"><i class="fa-solid fa-angle-right"></i></button>
-        <!-- <button><i class="fa-solid fa-stopwatch fa-2xl"></i></button> -->
-        <!-- <button><i class="fa-regular fa-calendar-plus fa-2xl"></i></button> -->
     </aside>
 
     <div class="snow"></div>

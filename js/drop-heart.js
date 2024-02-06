@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const colorArray = ["#012E40", "#024959", "#026773", "#3CA6A6", "#F2E3D5"];
+const colorArray = ["#F2E3D5", "#1e90ff", "#1562ad", "#fff59c"];
 // const dropText = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
 MIN_DURATION = 5;
@@ -29,5 +29,5 @@ function dropItems() {
     }, (duration + delay) * 1000);
 }
 for (i = 1; i < 50; i++) {
-    setTimeout(dropItems, 1000);
+    setTimeout(dropItems, 3000);
 }

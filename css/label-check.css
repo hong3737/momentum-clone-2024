@@ -69,3 +69,8 @@
 #dark-toggle.openCheck + label::after {
     background-image: url("../img/circle-half-stroke-solid.svg");
 }
+
+#openDdayCheck.openCheck + label::after {
+    background-image: url("../img/calendar-days-solid.svg");
+    background-size: 40%;
+}
